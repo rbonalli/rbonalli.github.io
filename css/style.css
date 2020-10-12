@@ -28,6 +28,15 @@ h1 {
   margin: 1em 0px 1em 0px;
 }
 
+ol {
+  list-style: none;
+}
+
+ol>li:before {
+  content: "[" attr(seq) "] ";
+  margin-left: -2em;
+}
+
 h2 {
   margin: 2em 0px 0px 0px;
 }
@@ -87,5 +96,5 @@ footer img {
 }
 
 .bounded{
-  width: 380px;
+  width: 390px;
 }
