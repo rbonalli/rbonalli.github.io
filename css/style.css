@@ -96,5 +96,6 @@ footer img {
 }
 
 .bounded{
-  width: 390px;
+  /*width: 390px;*/
+  width: 400px;
 }
