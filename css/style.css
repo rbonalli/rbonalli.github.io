@@ -3,7 +3,7 @@ body {
   font-family: Optima;
   max-width: 800px;
   margin: auto;
-  padding: 1em;
+  padding: 0em;
   line-height: 1.5em;
 }
 
@@ -11,21 +11,30 @@ header {
   background: #FFFFFF;
   font-family: Optima;
   font-weight: bold;
+  margin: 0em 0px -0.75em 0px;
 }
 
 footer {
   background: #FFFFFF;
   font-family: Optima;
   font-weight: bold;
-  margin: 2em 0px 10em 0px;
+  margin: -2.5em 0px 2em 0px;
 }
 
 h1, h2, h3, p, li {
   color: #484848;
 }
 
+body p {
+  margin: 0.5em 0px 0em 0px;
+}
+
+footer p {
+  margin: 2.5em 0px 0em 0px;
+}
+
 h1 {
-  margin: 1em 0px 1em 0px;
+  margin: 1em 0px 0.5em 0px;
 }
 
 ol {
@@ -38,7 +47,7 @@ ol>li:before {
 }
 
 h2 {
-  margin: 2em 0px 0px 0px;
+  margin: 1em 0px 0px 0px;
 }
 
 a {
@@ -95,7 +104,13 @@ footer img {
   margin: 0px;
 }
 
-.bounded{
+br {
+  display:block;
+  content: ""; /* clears default height */
+  margin-top: 0.5em;
+}
+
+.bounded {
   /*width: 390px;*/
   width: 400px;
 }
