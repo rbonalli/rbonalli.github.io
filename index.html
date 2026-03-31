@@ -27,7 +27,8 @@
 					<a href="projects.html">Software and Hardware Experiments</a>
 				</li>
 				<li>
-					<a href="ipsa.html">IPSA</a>
+					<!-- <a href="ipsa.html">IPSA</a> -->
+					<a href="ipsa.html" id="ipsa-link">IPSA</a>
 				</li>
 
 			</ul>
@@ -105,5 +106,24 @@
 		</p>
 
 	</footer>
+
+	<!-- To enable IPSA secret key -->
+	<script>
+	document.getElementById('ipsa-link').addEventListener('click', async function(e) {
+    	e.preventDefault();
+    	var code = prompt('Enter the access code:');
+    	if (code === null) return;
+    	var buf = await crypto.subtle.digest('SHA-256',
+        	new TextEncoder().encode(code));
+    	var hash = Array.from(new Uint8Array(buf))
+        	.map(b => b.toString(16).padStart(2, '0')).join('');
+    	if (hash === 'eb80fad877e7a90d5467ae8f8677bf1d7c40c39df34dd10ffe363ebbc69de637') {
+        	sessionStorage.setItem('ipsa_access', 'granted');
+        	window.location.href = 'ipsa.html';
+    	} else {
+        	alert('Incorrect code.');
+    	}
+	});
+	</script>
 
 </html>

@@ -32,6 +32,13 @@
 
 	<body>
 
+		<script>
+    		if (sessionStorage.getItem('ipsa_access') !== 'granted') {
+        		window.location.replace('index.html');
+    		}
+    		sessionStorage.removeItem('ipsa_access');
+    	</script>
+
 		<h1>IPSA - Advanced Optimal Control</h1>
 
 		<p>
@@ -40,7 +47,7 @@
 		</p>
 
 		<p>
-			<b>Jupyter notebooks.</b> To come.
+			<b>Jupyter notebooks.</b> <a href="IPSA/Python_1.ipynb" target="_blank">Python session 1</a>.
 			<!-- <b>Jupyter notebooks.</b> <a href="IPSA/Python_1.ipynb" target="_blank">Python session 1</a> and <a href="IPSA/Python_2.ipynb" target="_blank">Python session 2</a>. -->
 		</p>
 
@@ -48,5 +55,7 @@
 			<b>Groups sheet, populate by <a style="color:red;">April 30 2026 at 5:00pm</a>.</b> <a href="https://docs.google.com/spreadsheets/d/1tm_PDmdPPvHSoBVGw7grKveD3l69snb9hQtrD6X4Ka0/edit?usp=sharing" target="_blank">Google sheet</a>.
 			<!-- <b>Jupyter notebooks.</b> <a href="IPSA/Python_1.ipynb" target="_blank">Python session 1</a> and <a href="IPSA/Python_2.ipynb" target="_blank">Python session 2</a>. -->
 		</p>
+
+	</body>
 
 </html>
